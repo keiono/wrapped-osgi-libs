@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>org.cytoscape.wrappers</groupId>
+		<artifactId>wrapped-osgi-libs</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<bundle.symbolicName>com.tinkerpop.blueprints.core</bundle.symbolicName>
+		<wrapped.groupId>com.tinkerpop.blueprints</wrapped.groupId>
+		<wrapped.artifactId>blueprints-core</wrapped.artifactId>
+		<wrapped.version>0.9</wrapped.version>
+	</properties>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.cytoscape.wrappers</groupId>
+	<artifactId>tinkerpop-blueprints-core</artifactId>
+	<version>${wrapped.version}</version>
+
+	<name>${bundle.symbolicName} ${wrapped.version} [wrapped OSGi bundle]</name>
+
+	<packaging>bundle</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>${wrapped.groupId}</groupId>
+			<artifactId>${wrapped.artifactId}</artifactId>
+			<version>${wrapped.version}</version>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.ops4j</groupId>
+				<artifactId>maven-pax-plugin</artifactId>
+				<version>${maven-pax-plugin.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>${maven-bundle-plugin.version}</version>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
+						<Bundle-Version>${wrapped.version}</Bundle-Version>
+						<_exportcontents>*</_exportcontents>
+						<Private-Package>!*</Private-Package>
+						<_include>-osgi.bnd</_include>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+</project>
+
