@@ -18,6 +18,7 @@
 
 	<modules>
 		<module>tinkerpop-blueprints-core</module>
+		<module>tinkerpop-blueprints-neo4j-graph</module>
 	</modules>
 
 	<repositories>
