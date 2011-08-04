@@ -6,13 +6,14 @@
 	<properties>
 		<maven-pax-plugin.version>1.5</maven-pax-plugin.version>
 		<maven-bundle-plugin.version>2.3.5</maven-bundle-plugin.version>
-		<parent.version>0.0.1</parent.version>
 	</properties>
 	
 	<groupId>org.cytoscape.wrappers</groupId>
 	<artifactId>wrapped-osgi-libs</artifactId>
-	<version>${parent.version}</version>
+	<version>0.0.1</version>
 	<packaging>pom</packaging>
+	
+	<description>Convert plain jar libs to OSGi wrapped versions</description>
 
 	
 
