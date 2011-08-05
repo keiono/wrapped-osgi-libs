@@ -20,6 +20,7 @@
 	<modules>
 		<module>tinkerpop-blueprints-core</module>
 		<module>tinkerpop-blueprints-neo4j-graph</module>
+		<module>tinkerpop-blueprints-sail-graph</module>
 	</modules>
 
 	<repositories>
