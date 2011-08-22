@@ -1,37 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<properties>
 		<maven-pax-plugin.version>1.5</maven-pax-plugin.version>
 		<maven-bundle-plugin.version>2.3.5</maven-bundle-plugin.version>
 	</properties>
-	
+
 	<groupId>org.cytoscape.wrappers</groupId>
 	<artifactId>wrapped-osgi-libs</artifactId>
 	<version>0.0.1</version>
 	<packaging>pom</packaging>
-	
+
 	<description>Convert plain jar libs to OSGi wrapped versions</description>
 
-	
+
 
 	<modules>
 		<module>tinkerpop-blueprints-core</module>
 		<module>tinkerpop-blueprints-neo4j-graph</module>
 		<module>tinkerpop-blueprints-sail-graph</module>
-    	<module>openrdf-sesame</module>
-  </modules>
-
+		<module>openrdf-sesame</module>
+	</modules>
+	
 	<repositories>
+		<repository>
+			<id>fortytwo</id>
+			<name>fortytwo.net Maven repository</name>
+			<url>http://fortytwo.net/maven2</url>
+		</repository>
+
 		<repository>
 			<id>tinkerpop-repository</id>
 			<name>TinkerPop Maven2 Repository</name>
 			<url>http://tinkerpop.com/maven2</url>
 		</repository>
 	</repositories>
-	
+
 	<distributionManagement>
 		<repository>
 			<id>thirdparty</id>

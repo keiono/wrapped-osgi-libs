@@ -9,7 +9,8 @@
 	</parent>
 
 
-	<!-- Note: this jar is not in central repository, so you need to install locally. -->
+	<!-- Note: this jar is not in central repository, so you need to install 
+		locally. -->
 	<properties>
 		<bundle.symbolicName>org.openrdf.sesame-all</bundle.symbolicName>
 		<wrapped.groupId>org.openrdf</wrapped.groupId>
@@ -18,7 +19,6 @@
 	</properties>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.cytoscape.wrappers</groupId>
 	<artifactId>openrdf-sesame-all</artifactId>
 	<version>${wrapped.version}</version>
 
@@ -31,6 +31,19 @@
 			<groupId>${wrapped.groupId}</groupId>
 			<artifactId>${wrapped.artifactId}</artifactId>
 			<version>${wrapped.version}</version>
+			<optional>true</optional>
+
+		</dependency>
+		<dependency>
+			<groupId>net.fortytwo</groupId>
+			<artifactId>linked-data-sail</artifactId>
+			<version>0.7</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>net.fortytwo.sesametools</groupId>
+			<artifactId>nquads</artifactId>
+			<version>1.4</version>
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
